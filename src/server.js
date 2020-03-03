@@ -6,6 +6,7 @@ const forecast = require('./utils/forecast');
 
 
 const app = express();
+const port = process.env.PORT || 4000;
 const publicPath = path.join(__dirname, '../public');
 
 // Setup handlebars engine and views location
@@ -80,7 +81,8 @@ app.get('/help/*', (req, res)=>{
 });
 
 
-const port = 4000;
+
+
 app.listen(port, ()=>{
     console.log(`Server is running on Port ${port}`);
 });
