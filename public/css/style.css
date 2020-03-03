@@ -1,0 +1,87 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    /* min-height: 100vh; */
+    letter-spacing: 1px;
+    font-size: 0.8em;
+    font-family: 'Roboto';
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.result{
+    margin-bottom: 40px;
+}
+
+.cont{
+    max-width: 600px;
+    text-align: center;
+    margin: 0px auto;
+    flex-grow: 1;
+}
+
+.card-header{
+    height: 70px;
+    font-size: 16px;
+}
+
+.load{
+    width: 6rem !important;
+    height: 6rem !important;
+}
+
+.form-control{
+    width: 400px !important;
+    margin: 0 auto;
+}
+
+input::placeholder{
+    color: rgb(179, 179, 179) !important;
+}
+
+.btn{
+    background: rgb(255,53,71) !important;
+}
+
+
+
+.abt-img {
+    width: 350px;
+}
+
+.home-img{
+    width: 150px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.error-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.error-actions {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.error-actions .btn {
+    margin-right: 10px;
+}
+
+
+@media screen and (max-width: 600px){
+    .navbar {
+        width: 400px !important;
+    }
+
+    .result{
+        margin-bottom: 30px;
+    }
+    
+}
