@@ -28,7 +28,11 @@
                 placeholder="Enter a Location for Weather Information">
             <button type="submit" class="btn text-white">Search Weather</button>
         </form>
-        
+        <div id="loader" class="mt-3">
+            <div class="load spinner-border text-danger" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
         <div class="error"></div>
         <div class=" result card text-center details  mt-3"></div>
 

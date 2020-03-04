@@ -9,6 +9,9 @@ body{
     width: 100%;
 }
 
+#loader{
+    display: none;
+}
 .result{
     margin-bottom: 40px;
 }

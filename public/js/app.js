@@ -1,26 +1,23 @@
 
 document.querySelector('form').addEventListener('submit', (e)=>{
     e.preventDefault();
+    document.getElementById('loader').style.display = 'block';
+    
+    setTimeout(loadResult, 2000); 
+
+});
+
+
+function loadResult(){
+
     const location = document.querySelector('input').value;
-
-    // const loader = document.querySelector('.loader');
-    // const err = document.querySelector('.error');
-    // const weather =document.querySelector('.result');
-    
-    // err.textContent =  ` 
-    //     <div class="load spinner-border text-danger" role="status">
-    //         <span class="sr-only">Loading...</span>
-    //     </div>
-    // `;
-
-    
-    
 
     fetch('/weather?address='+location)
     .then((res)=>{
         res.json().then((data)=>{
             if(data.error) {
                 console.log(data.error);
+                document.getElementById('loader').style.display = 'none';
                 const err = document.querySelector('.error');
                 err.innerHTML = `
                     <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -32,6 +29,7 @@ document.querySelector('form').addEventListener('submit', (e)=>{
                 `
             } else{
                 console.log(data);
+                document.getElementById('loader').style.display = 'none';
                 const weather =document.querySelector('.result');
                 weather.innerHTML = `
                     <div class="card-header">
@@ -65,8 +63,7 @@ document.querySelector('form').addEventListener('submit', (e)=>{
         })
         
     });
-
-});
+}
 
 
 
