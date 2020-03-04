@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js -e js,hbs"
   },
   "author": "",
   "license": "ISC",
@@ -12,5 +13,8 @@
     "express": "^4.17.1",
     "hbs": "^4.1.0",
     "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   }
 }
