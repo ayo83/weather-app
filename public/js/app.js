@@ -20,7 +20,7 @@ function loadResult(){
                 document.getElementById('loader').style.display = 'none';
                 const err = document.querySelector('.error');
                 err.innerHTML = `
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <div class="alert alert-danger alert-dismissible fade show mt-4" role="alert">
                         <strong>${data.error}</strong>
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
